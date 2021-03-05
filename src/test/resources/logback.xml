@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+   <property name="LoggingDir" value="./log/" />
+
+   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+      <target>System.out</target>
+      <encoder>
+         <!--pattern>%d{ISO8601} %p %t %c{1}.%M - %m - %mdc%n</pattern-->
+         <pattern>%d{ISO8601} %p - %m%n</pattern>
+      </encoder>
+   </appender>
+
+   <root level="INFO">
+      <appender-ref ref="CONSOLE" />
+   </root>
+
+</configuration>

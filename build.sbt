@@ -8,9 +8,11 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "BeforeAfterAllTest",
-    libraryDependencies += specs2 % Test
-
-  )
+    libraryDependencies ++= Seq(
+      specs2 % Test,
+      "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
+      "ch.qos.logback" % "logback-classic" % "1.1.3" % Runtime
+  ))
 
 fork in run := true
 
